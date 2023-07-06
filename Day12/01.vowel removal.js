@@ -1,4 +1,4 @@
-// 나의 해결 - 해결 못했음
+// 나의 해결 - 이중 루프 사용법 참고해서 해결 함
 function solution(my_string) {
   let newString = '';
   const vowel = ['a', 'e', 'i', 'o', 'u'];

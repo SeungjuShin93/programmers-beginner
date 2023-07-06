@@ -19,3 +19,19 @@ function solution(n) {
   return answer;
 }
 console.log(solution(420));
+
+
+// 라매님 풀이
+function solution(n) {
+  let answer = [];
+  for (let i = 2; n !== 1; i++) {
+    if (n % i === 0) {
+      while (n % i === 0) {
+        n /= i;
+      }
+      answer.push(i);
+    }
+  }
+  return answer;
+}
+console.log(solution(420));
