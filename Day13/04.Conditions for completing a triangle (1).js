@@ -6,7 +6,7 @@ function solution(sides) {
   // } else {
   //   return 2;
   // }
-  copy[0] + copy[1] > copy[2] ? 1 : 2;
+  return copy[0] + copy[1] > copy[2] ? 1 : 2;
 }
 
 console.log(solution([199, 72, 222]));

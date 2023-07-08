@@ -20,7 +20,6 @@ function solution(n) {
 }
 console.log(solution(420));
 
-
 // 라매님 풀이
 function solution(n) {
   let answer = [];
