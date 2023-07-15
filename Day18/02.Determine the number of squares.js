@@ -1,20 +1,23 @@
 // 나의 풀이
-function solution(n, numlist) {
-  var answer = [];
-  for (let i = 0; i < numlist.length; i++) {
-    const item = numlist[i];
-    if (item % n === 0) {
-      answer.push(item);
+function solution(n) {
+  for (let i = 2; i <= n / 2; i++) {
+    if (n / (i * i) === 1) {
+      return 1;
     }
   }
-  return answer;
+  return 2;
 }
-console.log(solution(3, [4, 5, 6, 7, 8, 9, 10, 11, 12]));
+
+console.log(solution(144));
 
 // 라매님 풀이
-// 100% 동일
-
-// 라매님 풀이2
-function solution(n, numlist) {
-  return numlist.filter((item) => item % 3 === 0);
+function solution(n) {
+  for (let i = 1; ; i++) {
+    if (i * i === n) {
+      return 1;
+    }
+    if (i * i > n) {
+      return 2;
+    }
+  }
 }

@@ -1,26 +1,25 @@
 // 나의 풀이
-function solution(my_string) {
+function solution(n) {
   var answer = 0;
-  const splittedArray = my_string.split(' ');
-  answer = Number(splittedArray[0]);
-  for (let i = 1; i < splittedArray.length; i += 2) {
-    if (splittedArray[i] == '+') {
-      answer += Number(splittedArray[i + 1]);
-    } else if (splittedArray[i] == '-') {
-      answer -= Number(splittedArray[i + 1]);
+  let i = 10;
+  while (true) {
+    answer += n % i;
+    n = parseInt(n / i);
+    if (n === 0) {
+      break;
     }
-    // switch (splittedArray[i]) {
-    //   case '+':
-    //     answer += Number(splittedArray[i + 1]);
-    //     break;
-    //   case '-':
-    //     answer -= Number(splittedArray[i + 1]);
-    //     break;
-    // }
   }
   return answer;
 }
-console.log(solution('3 + 4'));
+console.log(solution(930211));
 
 // 라매님 풀이
-// 100% 동일
+function solution(n) {
+  let sum = 0;
+  const strN = String(n);
+  for (let i = 0; i < strN.length; i++) {
+    const item = strN[i];
+    sum += Number(item);
+  }
+  return sum;
+}
