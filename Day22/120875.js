@@ -1,6 +1,23 @@
 // https://present.kim/posts/programmers/120875
 // 참고 사이트
 // 스스로 해결 못 했음
+
+// 풀이 1
+function solution(dots) {
+  if (calculateSlope(dots[0], dots[1]) === calculateSlope(dots[2], dots[3]))
+    return 1;
+  if (calculateSlope(dots[0], dots[2]) === calculateSlope(dots[1], dots[3]))
+    return 1;
+  if (calculateSlope(dots[0], dots[3]) === calculateSlope(dots[1], dots[2]))
+    return 1;
+  return 0;
+}
+
+function calculateSlope(arr1, arr2) {
+  return (arr2[1] - arr1[1]) / (arr2[0] - arr1[0]);
+}
+
+// 풀이 2
 function solution(dots) {
   //두 점의 인덱스가 주어지면 두점을 이은 직선의 각도를 반환하는 함수
   const angle = (a, b) => (dots[a][0] - dots[b][0]) / (dots[a][1] - dots[b][1]);
@@ -29,8 +46,7 @@ console.log(
     [11, 6],
   ])
 );
-
-// 개선된 코드
+// 풀이 2의 개선된 코드
 //두 점을 이은 직선의 각도를 반환하는 함수
 const angle = (a, b) => (a[0] - b[0]) / (a[1] - b[1]);
 
